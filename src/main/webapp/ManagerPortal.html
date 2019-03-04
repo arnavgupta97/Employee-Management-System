@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Manager</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="js/underscore.js" type="text/javascript"></script>
+<script src="js/backbone.js" type="text/javascript"></script>
+<script src="js/session.js" type="text/javascript"></script>
+</head>
+<style>
+button {
+	float: right;
+	margin: 8px;
+}
+
+table {
+	margin-left: 300px;
+	width: 50%;
+	table-layout: fixed;
+}
+
+table, td, th {
+	border: 1px solid black;
+	text-align: center;
+}
+
+th, td {
+	padding: 15px;
+}
+
+th {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">Manager</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="">Home</a></li>
+				<li><a href="assignProject.html">Assign Project</a></li>
+				<li><a href="listProject.html">List Projects</a></li>
+				<li><a href="listLeaves.html">List Leaves</a></li>
+			</ul>
+			<button type="button" class="btn btn-default" onclick="logout()">Log
+				Out</button>
+		</div>
+	</nav>
+	<div class="center">
+		<div id="employee-view"></div>
+		<table>
+			<tr>
+				<th colspan="2">WELCOME TO YOUR PROFILE</th>
+			</tr>
+		</table>
+		<script type="text/template" id="employee-temp">
+           <table>
+          <tr>
+            <td>ID</td>
+            <td><%=id%></td>
+          </tr>
+         <tr>
+            <td>NAME</td>
+            <td><%=name%></td>
+          </tr>
+         <tr>
+            <td>USER ROLE</td>
+            <td><%=userrole%></td>
+          </tr>
+          <tr>
+            <td>CONTACT</td>
+            <td><%=contact%></td>
+          </tr>
+         <tr>
+            <td>EMAIL</td>
+            <td><%=email%></td>
+          </tr>
+        </table>
+        </script>
+		<script src="js/profile.js" type="text/javascript"></script>
+	</div>
+</body>
+</html>
